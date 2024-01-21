@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <main>
       <Banner />
-      <People />
       <Features />
       <Business />
     </main>

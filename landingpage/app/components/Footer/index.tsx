@@ -45,14 +45,9 @@ const footer = () => {
         <div className="my-12 grid grid-cols-1 gap-y-10 sm:grid-cols-6 lg:grid-cols-12">
           {/* COLUMN-1 */}
 
-          <div className="sm:col-span-6 lg:col-span-3">
-            <div className="flex flex-shrink-0 items-center border-right">
-              <Image
-                src="/assets/footer/logo.svg"
-                alt="logo"
-                width={214}
-                height={66}
-              />
+          <div className="sm:col-span-6 lg:col-span-3 grid items-center">
+            <div className="text-3xl text-white font-bold flex flex-shrink-0 items-center">
+              VanRakshak
             </div>
           </div>
 

@@ -4,8 +4,6 @@ import Link from "next/link";
 import React from "react";
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
-import Signdialog from "./Signdialog";
-import Registerdialog from "./Registerdialog";
 
 interface NavigationItem {
   name: string;
@@ -33,17 +31,8 @@ const Navbar = () => {
             <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
               {/* LOGO */}
 
-              <div className="flex flex-shrink-0 items-center">
-                <img
-                  className="block h-12 w-40 lg:hidden"
-                  src={"/assets/logo/logo.svg"}
-                  alt="Vanrakshak-logo"
-                />
-                <img
-                  className="hidden h-full w-full lg:block"
-                  src={"/assets/logo/logo.svg"}
-                  alt="Vanrakshak-logo"
-                />
+              <div className="text-3xl text-[#0057FF] font-bold flex flex-shrink-0 items-center">
+                VanRakshak
               </div>
 
               {/* LINKS */}
@@ -69,18 +58,17 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* SIGNIN DIALOG */}
-
-            <Signdialog />
-
-            {/* REGISTER DIALOG */}
-
-            <Registerdialog />
-
             {/* DRAWER FOR MOBILE VIEW */}
 
             {/* DRAWER ICON */}
-
+            <div className="hidden lg:block">
+              <Link
+                href={process.env.NEXT_PUBLIC_SIGNUP!}
+                className="px-8 py-4 rounded-full text-white bg-[#0057FF]"
+              >
+                Login
+              </Link>
+            </div>
             <div className="block lg:hidden">
               <Bars3Icon
                 className="block h-6 w-6"
