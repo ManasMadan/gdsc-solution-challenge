@@ -1,0 +1,10 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Development Mode",
+      "type": "shell",
+      "command": "cd backend;source env/bin/activate;python3 -m flask --app main --debug run"
+    }
+  ]
+}
