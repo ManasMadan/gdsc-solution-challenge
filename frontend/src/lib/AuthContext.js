@@ -8,7 +8,7 @@ const AuthContext = createContext({});
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState({ email: null, uid: null });
+  const [user, setUser] = useState({ email: null, uid: null, name: null });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,9 +17,10 @@ export const AuthContextProvider = ({ children }) => {
         setUser({
           email: user.email,
           uid: user.uid,
+          name: user.displayName,
         });
       } else {
-        setUser({ email: null, uid: null });
+        setUser({ email: null, uid: null, name: null });
       }
     });
     setLoading(false);

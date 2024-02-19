@@ -21,6 +21,7 @@ import { TableBody } from "@tremor/react";
 import { TableCell } from "@tremor/react";
 import { deleteNotification } from "@/lib/firebase/firestore";
 import { useRouter } from "next/navigation";
+import GeminiChatbot from "./GeminiChatbot";
 
 const CompareComponent = ({ data }) => (
   <Card className="flex flex-col items-center gap-8">
@@ -74,9 +75,9 @@ export default function Region({ _region, _data, _notifications, regionId }) {
   const notifications = JSON.parse(_notifications);
   const [compare1, setCompare1] = useState(null);
   const [compare2, setCompare2] = useState(null);
-
   return (
     <main className="flex flex-col gap-8 container py-12">
+      <GeminiChatbot />
       <Link href="/dashboard" className="w-fit">
         <Button color="red" icon={ArrowUturnLeftIcon}>
           Go Back
